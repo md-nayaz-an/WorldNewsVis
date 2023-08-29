@@ -30,6 +30,7 @@ export default function Search(props) {
                 },
                 zIndex: 2,
                 width: {xs: "75%", lg: "25%"},
+                opacity: 0.8,
             }}
             ref={textFieldRef}
             display="flex"
@@ -45,7 +46,6 @@ export default function Search(props) {
             sx={{
                 border: "white",
                 backgroundColor: theme.palette.background.main,
-                opacity: 0.8,
             }}
             InputProps={{
                 style: { color: theme.text.onBackground},
@@ -85,6 +85,11 @@ export default function Search(props) {
         >
             <Button
                 variant="contained"
+                onClick={(e) => props.snackOpen(e, 
+                    {
+                        message: "Demo without external API limit. Stream latency of 1sec (to demonstrate Streamed Response).",
+                        autoHideDuration: 5000,
+                    })}
             >
                 Demo
             </Button>            
